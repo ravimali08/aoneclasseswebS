@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | AONE Classes Anjar</title>
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Inline Script for Fast Theme Sync -->
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.add('light-mode');
+    }
+  </script>
+  
+  <style>
+    /* Admin specific layout styles */
+    .admin-container {
+      min-height: 80vh;
+      padding-top: calc(var(--header-height) + 2rem);
+      padding-bottom: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .login-card {
+      background-color: var(--color-bg-light);
+      border: 2px solid var(--color-border);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .dashboard-wrapper {
+      width: 100%;
+      max-width: var(--max-width);
+      display: none; /* Toggle via JS */
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .admin-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .stat-card {
+      background-color: var(--color-bg-light);
+      border: 2px solid var(--color-border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    
+    .stat-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: rgba(37, 211, 102, 0.1);
+      color: var(--color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    
+    .stat-card-icon.red {
+      background-color: rgba(229, 57, 53, 0.1);
+      color: var(--color-cta);
+    }
+    
+    .stat-card-info h3 {
+      font-size: 1.75rem;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-card-info p {
+      font-size: 0.875rem;
+      color: var(--color-text-sub);
+    }
+    
+    .table-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      background-color: var(--color-bg-light);
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
+      border: 2px solid var(--color-border);
+    }
+    
+    .search-input-wrapper {
+      position: relative;
+      flex-grow: 1;
+      max-width: 400px;
+    }
+    
+    .search-input-wrapper i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text-sub);
+    }
+    
+    .search-input-wrapper input {
+      padding-left: 2.75rem !important;
+    }
+    
+    .table-container {
+      background-color: var(--color-bg-light);
+      border: 2px solid var(--color-border);
+      border-radius: 16px;
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    
+    th, td {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    th {
+      font-family: var(--font-headings);
+      font-weight: 600;
+      color: var(--color-text-main);
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .badge-course {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: rgba(37, 211, 102, 0.15);
+      color: var(--color-secondary);
+    }
+    
+    .badge-course.commerce {
+      background-color: rgba(229, 57, 53, 0.15);
+      color: var(--color-cta);
+    }
+    
+    .btn-logout {
+      background-color: transparent;
+      border: 2px solid var(--color-cta);
+      color: var(--color-cta);
+      padding: 0.5rem 1.25rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition-normal);
+    }
+    
+    .btn-logout:hover {
+      background-color: var(--color-cta);
+      color: #FFFFFF;
+    }
+    
+    .btn-export {
+      background-color: var(--color-secondary);
+      color: #FFFFFF;
+      padding: 0.85rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      transition: var(--transition-normal);
+    }
+    
+    .btn-export:hover {
+      background-color: var(--color-yellow-hover);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header header-transparent">
+    <div class="container">
+      <a href="index.html" class="logo" id="navLogo">
+        <img src="assets/logo.png" alt="AONE Classes Logo">
+      </a>
+      
+      <div class="nav-right">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun" id="themeToggleIcon"></i>
+        </button>
+        
+        <button id="logoutBtnHeader" class="btn-logout" style="display: none;">Log Out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Admin Main Layout Container -->
+  <main class="admin-container container">
+    
+    <!-- LOGIN SCREEN -->
+    <div class="login-card" id="loginCard">
+      <h3 style="margin-bottom: 0.5rem; text-align: center;">Admin Login</h3>
+      <p style="margin-bottom: 2rem; text-align: center; font-size: 0.9rem; color: var(--color-text-sub);">Access student counseling and admission inquiries database.</p>
+      
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="email" class="form-label">Admin Email</label>
+          <input type="email" id="email" class="form-control" placeholder="admin@aoneclasses.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Enter secure password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" id="loginBtn">
+          Secure Login <i class="fa-solid fa-lock" style="margin-left: 0.5rem;"></i>
+        </button>
+      </form>
+    </div>
+    
+    <!-- DASHBOARD PANEL -->
+    <div class="dashboard-wrapper" id="dashboardPanel">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <h2>Counseling Inquiries Panel</h2>
+          <p>Real-time database registrations from contact forms and enrollment CTAs.</p>
+        </div>
+        <button id="logoutBtn" class="btn-logout">Logout <i class="fa-solid fa-right-from-bracket" style="margin-left: 0.5rem;"></i></button>
+      </div>
+      
+      <!-- Stats Summary -->
+      <div class="admin-stats-grid">
+        <div class="stat-card">
+          <div class="stat-card-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-card-info">
+            <h3 id="statTotalInquiries">0</h3>
+            <p>Total Inquiries</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon"><i class="fa-solid fa-language"></i></div>
+          <div class="stat-card-info">
+            <h3 id="statSpokenEnglish">0</h3>
+            <p>Spoken English</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon red"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="stat-card-info">
+            <h3 id="statCommerce">0</h3>
+            <p>Commerce Prep</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table Controls -->
+      <div class="table-controls">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" class="form-control" placeholder="Search by student name, phone or course...">
+        </div>
+        
+        <button id="exportCsvBtn" class="btn-export">
+          <i class="fa-solid fa-file-csv"></i> Export to CSV
+        </button>
+      </div>
+      
+      <!-- Data Table -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Student Name</th>
+              <th>Mobile Number</th>
+              <th>Interested Course</th>
+              <th>Message / Requirements</th>
+            </tr>
+          </thead>
+          <tbody id="inquiriesTableBody">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 3rem; color: var(--color-text-sub);">
+                <i class="fa-solid fa-spinner fa-spin" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                Fetching inquiries...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer" style="padding: 2rem 0; border-top: 1px solid var(--color-border); text-align: center; font-size: 0.9rem;">
+    <p>&copy; 2026 AONE Classes Anjar. Secure Administrator Access Portal.</p>
+  </footer>
+
+  <!-- Admin Controller -->
+  <script src="admin.js"></script>
+  <!-- Global script for theme toggle -->
+  <script src="script.js"></script>
+</body>
+</html>
