@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Spoken English in Anjar, Gujarat at AONE Classes. Premium offline coaching for Gujarati-medium and Hindi-speaking students. Join our 3-month course.">
+  <title>AONE Classes Anjar | Spoken English & Commerce Coaching</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global & Component Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header header-transparent">
+    <div class="container">
+      <a href="index.html" class="logo" id="navLogo">
+        <img src="assets/logo.png" alt="AONE Classes Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="courses.html" class="nav-link">Other Courses</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" id="headerCtaBtn">Enroll Now</a>
+      </div>
+      
+      <button class="menu-btn" aria-label="Toggle Menu" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobileNavDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="courses.html" class="mobile-nav-link">Other Courses</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+    </ul>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
+    </div>
+  </div>
+
+  <!-- 1. HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="badge" id="heroBadge">
+          <i class="fa-solid fa-graduation-cap"></i> Admissions Open for Spoken English
+        </div>
+        <h1 id="heroHeadline">Learn English by <span style="color: var(--color-cta)">Speaking</span>, Not Just Studying.</h1>
+        <p class="subheading" id="heroSubheading">Where English Learning Becomes Real Communication.</p>
+        <p id="heroBody">Helping Gujarati-Medium & Hindi-speaking students in Anjar speak English confidently through our activity-based practical learning course.</p>
+        
+        <div class="hero-trust-bar" id="heroTrustBar">
+          <span class="trust-item"><i class="fa-solid fa-circle-check"></i> 3-Month Program</span>
+          <span class="trust-item"><i class="fa-solid fa-circle-check"></i> Gujarati-Friendly Teaching</span>
+          <span class="trust-item"><i class="fa-solid fa-circle-check"></i> Two Convenient Evening Batches</span>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="contact.html" class="btn btn-primary" id="heroEnrollBtn">
+            Enroll Now <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="https://wa.me/+919909525195?text=Hello%20Sir%20%F0%9F%91%8B%20%20I%20am%20interested%20in%20the%203-Month%20Spoken%20English%20Course.%20%20Could%20you%20please%20share%20the%20course%20details,%20fees,%20batch%20timings,%20and%20admission%20process?%20%20Thank%20you." class="btn btn-whatsapp" target="_blank" id="heroWhatsappBtn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-image-wrapper reveal delay-200">
+        <div class="hero-glow"></div>
+        <img src="assets/sir_portrait.png" alt="AONE Classes Head Instructor" class="hero-image" id="heroMainImg">
+        
+        <!-- Floating Badges -->
+        <div class="floating-card floating-card-1">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>3 Month Program</span>
+        </div>
+        <div class="floating-card floating-card-2">
+          <i class="fa-solid fa-door-open"></i>
+          <span>Admission Open</span>
+        </div>
+        <div class="floating-card floating-card-3">
+          <i class="fa-solid fa-school"></i>
+          <span>Offline Classes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Stats Bar -->
+  <section class="container" style="position: relative; z-index: 10;">
+    <div class="stats-bar reveal">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3 class="counter-val" data-count="3" data-suffix=" Months">0</h3>
+          <p>Practical Training Duration</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="counter-val" data-count="100" data-suffix="+">0</h3>
+          <p>Confident Students Trained</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="counter-val" data-count="100" data-suffix="%">0</h3>
+          <p>Confidence Building Focus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT THE COURSE -->
+  <section class="section-padding" id="about-course">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+        <!-- Highlighted Course Philosophy Card -->
+        <div class="reveal">
+          <div class="card" style="border-left: 6px solid var(--color-cta); padding: 3.25rem 2.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center; box-shadow: var(--shadow-lg);">
+            <h3 style="margin-bottom: 1.25rem; color: var(--color-primary); font-size: 1.6rem; font-family: var(--font-headings); font-weight: 700;">Learn English by Speaking, Not Just Studying</h3>
+            <p style="margin-bottom: 1.25rem; font-size: 1.05rem; line-height: 1.7; color: var(--color-text-sub);">At AONE Classes, we don't believe in making you copy complex grammar rules into notebooks. Instead, we focus on action. We make you stand up, speak, discuss, debate, and communicate every single day.</p>
+            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-sub);">Our offline classroom is a supportive, judgment-free space designed especially to help Gujarati-medium and Hindi-speaking students speak English naturally and build real-life confidence.</p>
+          </div>
+        </div>
+
+        <div class="reveal delay-200">
+          <div class="section-header">
+            <span class="tag">About the Course</span>
+            <h2>Practical Spoken English Training for Gujarati-Medium Students</h2>
+          </div>
+          <p style="margin-bottom: 1.5rem;">AONE Classes offers a practical <strong>3-Month Spoken English Course</strong> designed especially for Gujarati-medium and Hindi-speaking students who want to speak English confidently and remove stage fear.</p>
+          
+          <ul class="about-features-list">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="list-content">
+                <strong>What is it:</strong>
+                <span>3-Month offline Spoken English Program</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="list-content">
+                <strong>For Whom:</strong>
+                <span>School & college students, professionals struggling with English</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="list-content">
+                <strong>Teaching Approach:</strong>
+                <span>Local Gujarati-friendly guidelines, activity-based drills</span>
+              </div>
+            </li>
+          </ul>
+          
+          <a href="about.html" class="btn btn-outline">Read More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHY STUDENTS STRUGGLE WITH ENGLISH -->
+  <section class="section-padding bg-alternate" id="pain-points">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+        <div class="reveal">
+          <div class="section-header">
+            <span class="tag" style="background-color: rgba(229, 57, 53, 0.08); color: var(--color-cta)">Identify the Problem</span>
+            <h2>Why Students Struggle With English Speaking</h2>
+            <p>Traditional education focuses on memorizing grammar rules for scoring marks. Because of this, students face these common problems:</p>
+          </div>
+          
+          <ul class="struggle-list">
+            <li class="struggle-item">
+              <div class="struggle-icon"><i class="fa-solid fa-xmark"></i></div>
+              <span class="struggle-text">English samaj aati hai, lekin bolne me confusion hota hai</span>
+            </li>
+            <li class="struggle-item">
+              <div class="struggle-icon"><i class="fa-solid fa-xmark"></i></div>
+              <span class="struggle-text">Sentence design karte waqt confidence loose ho jata hai</span>
+            </li>
+            <li class="struggle-item">
+              <div class="struggle-icon"><i class="fa-solid fa-xmark"></i></div>
+              <span class="struggle-text">Public speaking and stage and group presence me darr lagta hai</span>
+            </li>
+            <li class="struggle-item">
+              <div class="struggle-icon"><i class="fa-solid fa-xmark"></i></div>
+              <span class="struggle-text">Traditional complex grammar lectures rules ka fear rehta hai</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="reveal delay-200">
+          <img src="assets/about_learning.png" alt="Students struggling to speak English" class="hero-image" style="width: 100%; border: 4px solid var(--color-bg-white);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HOW AONE CLASSES HELPS -->
+  <section class="section-padding" id="how-we-help">
+    <div class="container">
+      <div class="section-header center text-center reveal" style="max-width: 800px;">
+        <span class="tag" style="background-color: rgba(16, 185, 129, 0.1); color: #10B981;">The Solution</span>
+        <h2>How AONE Classes Helps You Succeed</h2>
+        <p>We shift the focus from theory to continuous practical communication. Here is how our activity-based methodology solves your struggles:</p>
+      </div>
+
+      <div class="grid grid-2" style="gap: 2.5rem; max-width: 1000px; margin: 0 auto;">
+        <div class="reveal">
+          <ul class="solution-list">
+            <li class="solution-item">
+              <div class="solution-icon"><i class="fa-solid fa-check"></i></div>
+              <div class="solution-text-container">
+                <h4>Daily English Speaking Practice</h4>
+                <p>Ensures you start framing sentences out loud from day one, breaking hesitation.</p>
+              </div>
+            </li>
+            <li class="solution-item">
+              <div class="solution-icon"><i class="fa-solid fa-check"></i></div>
+              <div class="solution-text-container">
+                <h4>Classroom Debates</h4>
+                <p>Develops quick thinking and fast response structures in English under pressure.</p>
+              </div>
+            </li>
+            <li class="solution-item">
+              <div class="solution-icon"><i class="fa-solid fa-check"></i></div>
+              <div class="solution-text-container">
+                <h4>Group Discussions</h4>
+                <p>Simulates real-world peer interactions, building group communication confidence.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal delay-200">
+          <ul class="solution-list">
+            <li class="solution-item">
+              <div class="solution-icon"><i class="fa-solid fa-check"></i></div>
+              <div class="solution-text-container">
+                <h4>PPT Presentations</h4>
+                <p>Students design slides and stand in front of the class to speak, killing stage fear completely.</p>
+              </div>
+            </li>
+            <li class="solution-item">
+              <div class="solution-icon"><i class="fa-solid fa-check"></i></div>
+              <div class="solution-text-container">
+                <h4>Learning Through Movies</h4>
+                <p>Watch clips to learn natural native accents, vocabulary, and daily conversational expressions.</p>
+              </div>
+            </li>
+            <li class="solution-item">
+              <div class="solution-icon"><i class="fa-solid fa-check"></i></div>
+              <div class="solution-text-container">
+                <h4>Confidence Building Drills</h4>
+                <p>Supervised role plays and interactive games designed to take away english speaking anxiety.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHY CHOOSE AONE CLASSES -->
+  <section class="section-padding bg-alternate" id="why-choose-us">
+    <div class="container">
+      <div class="section-header center text-center reveal">
+        <span class="tag">Trust Indicators</span>
+        <h2>Why Choose AONE Classes?</h2>
+        <p>We provide a premium offline learning workspace focused entirely on personalized outcomes.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="icon-box"><i class="fa-solid fa-users"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Small Batch Size</h3>
+          <p>We restrict each batch size so the teacher can monitor and evaluate every student's daily speaking speech directly.</p>
+        </div>
+        
+        <div class="card reveal delay-100">
+          <div class="icon-box"><i class="fa-solid fa-user-check"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Personal Attention</h3>
+          <p>Get personalized feedback on sentence construction errors, pronunciation corrections, and confidence development.</p>
+        </div>
+        
+        <div class="card reveal delay-200">
+          <div class="icon-box"><i class="fa-solid fa-hands-helping"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Gujarati-Friendly</h3>
+          <p>Rules and explanations are mapped back to Gujarati comparisons, ensuring Gujarati-medium students understand everything clearly.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Practical Learning</h3>
+          <p>No boring notebooks or rules memorization. Speak to learn, learn to communicate, participate daily in classes.</p>
+        </div>
+
+        <div class="card reveal delay-100" style="grid-column: span 1; @media (min-width: 1024px) { grid-column: span 2; }">
+          <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Confidence Building</h3>
+          <p>Special activities like public presentations, role plays, and debates designed specifically to remove hesitations and anxiety.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WHAT STUDENTS WILL LEARN -->
+  <section class="section-padding" id="what-you-learn">
+    <div class="container">
+      <div class="section-header center text-center reveal">
+        <span class="tag">Course Outcomes</span>
+        <h2>What Students Will Learn & Experience</h2>
+        <p>Develop complete control over your English communication and presentation skills.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="icon-box"><i class="fa-solid fa-comments"></i></div>
+          <h4 style="margin-bottom: 0.75rem; font-size: 1.2rem;">Speaking Fluency</h4>
+          <p>Speak naturally, frame correct sentences on the spot, and express opinions clearly.</p>
+        </div>
+        
+        <div class="card reveal delay-100">
+          <div class="icon-box"><i class="fa-solid fa-ear-listen"></i></div>
+          <h4 style="margin-bottom: 0.75rem; font-size: 1.2rem;">Listening & Pronunciation</h4>
+          <p>Understand professional accents, catch idioms, and speak words with clear, correct pronunciation.</p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+          <h4 style="margin-bottom: 0.75rem; font-size: 1.2rem;">Reading Comprehension</h4>
+          <p>Read storybooks, identify vocabulary structures, and broaden your contextual knowledge base.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon-box"><i class="fa-solid fa-pen-nib"></i></div>
+          <h4 style="margin-bottom: 0.75rem; font-size: 1.2rem;">Structured Writing</h4>
+          <p>Draft professional emails, write clear essays, and map your thoughts logically on paper.</p>
+        </div>
+
+        <div class="card reveal delay-100">
+          <div class="icon-box"><i class="fa-solid fa-bullhorn"></i></div>
+          <h4 style="margin-bottom: 0.75rem; font-size: 1.2rem;">Public Speaking</h4>
+          <p>Stand up in front of groups, hold presentations, and maintain confident eye contact and body language.</p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <div class="icon-box"><i class="fa-solid fa-arrows-spin"></i></div>
+          <h4 style="margin-bottom: 0.75rem; font-size: 1.2rem;">Communication Confidence</h4>
+          <p>Remove speech anxiety, handle job interviews confidently, and talk to anyone without hesitation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. LEARNING ACTIVITIES -->
+  <section class="section-padding bg-alternate" id="activities">
+    <div class="container">
+      <div class="section-header center text-center reveal">
+        <span class="tag">Interactive Classes</span>
+        <h2>Fun Classroom Activities</h2>
+        <p>Students enjoy learning. We focus on games and group interactions to make English natural.</p>
+      </div>
+
+      <div class="grid activities-grid">
+        <!-- Debates -->
+        <div class="activity-card reveal">
+          <div class="activity-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+          <div class="activity-details">
+            <h4>🎤 Debates</h4>
+            <p>Argue structured points in English, developing fast mental translations and responses.</p>
+          </div>
+        </div>
+        
+        <!-- Group Discussions -->
+        <div class="activity-card reveal delay-100">
+          <div class="activity-icon"><i class="fa-solid fa-users-rectangle"></i></div>
+          <div class="activity-details">
+            <h4>👥 Group Discussions</h4>
+            <p>Discuss interesting topics in small groups, sharing ideas and correcting speech errors.</p>
+          </div>
+        </div>
+
+        <!-- PPT Presentations -->
+        <div class="activity-card reveal delay-200">
+          <div class="activity-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="activity-details">
+            <h4>📊 PPT Presentations</h4>
+            <p>Deliver slides and explain concepts, boosting corporate professionalism and stage presence.</p>
+          </div>
+        </div>
+
+        <!-- English Movies -->
+        <div class="activity-card reveal">
+          <div class="activity-icon"><i class="fa-solid fa-clapperboard"></i></div>
+          <div class="activity-details">
+            <h4>🎬 English Movies</h4>
+            <p>Analyze dialogues and correct real-world expressions from movie clips.</p>
+          </div>
+        </div>
+
+        <!-- Story Reading -->
+        <div class="activity-card reveal delay-100">
+          <div class="activity-icon"><i class="fa-solid fa-book"></i></div>
+          <div class="activity-details">
+            <h4>📖 Story Reading</h4>
+            <p>Read curated storybooks under trainer guidance to discover and memorize vocabulary words.</p>
+          </div>
+        </div>
+
+        <!-- Role Plays -->
+        <div class="activity-card reveal delay-200">
+          <div class="activity-icon"><i class="fa-solid fa-theater-masks"></i></div>
+          <div class="activity-details">
+            <h4>🎭 Role Plays</h4>
+            <p>Simulate job interviews, restaurant orders, and official office settings dynamically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIALS -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header center text-center reveal">
+        <span class="tag">Social Proof</span>
+        <h2>Student & Parent Reviews</h2>
+        <p>Hear from real students and parents in Anjar whose academic and personal lives were changed by AONE Classes.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I studied in a Gujarati-medium school. I was scared to speak English, but the Gujarati-friendly approach here made everything easy. Now I speak fluently with my colleagues!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">KP</div>
+            <div class="testimonial-user-info">
+              <h5>Karan Patel</h5>
+              <span>Alumni, Anjar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card reveal delay-100">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"My daughter was extremely shy. After joining AONE Classes, she presented a PPT presentation in front of 40 students with full confidence. Very thankful to AONE!"</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">SD</div>
+            <div class="testimonial-user-info">
+              <h5>Savitaben Dave</h5>
+              <span>Parent, Anjar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card reveal delay-200">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"No boring lectures or rules. We practiced speaking every single day. The debates and movie classes make learning Spoken English extremely interactive and fun."</p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">MS</div>
+            <div class="testimonial-user-info">
+              <h5>Mehul Shah</h5>
+              <span>College Student</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="section-padding bg-alternate" id="faq">
+    <div class="container">
+      <div class="section-header center text-center reveal">
+        <span class="tag">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Clear all your doubts regarding course admission, batches, and teaching methodology.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">
+            <h4>What is the duration of the Spoken English course?</h4>
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              The program is a comprehensive 3-month course designed to take students from basic sentence structuring to confident public communication.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <h4>What are the batch timings?</h4>
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              We run two evening batches from Monday to Friday:
+              <ul>
+                <li>Batch 1: 4:00 PM – 5:00 PM</li>
+                <li>Batch 2: 5:00 PM – 6:00 PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <h4>Who can join this Spoken English course?</h4>
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              School students, college students, job seekers, and anyone who wants to improve their English speaking fluency and boost their self-confidence can join.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <h4>Is it suitable for Gujarati-medium students?</h4>
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, our entire curriculum is specially designed for Gujarati-medium and Hindi-speaking students. We explain rules using familiar Gujarati structures so students learn without fear.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <h4>How can I take admission or book a seat?</h4>
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              You can click "Enroll Now" and submit the inquiry form, or contact us directly on WhatsApp or Call. We invite students to visit our offline center in Anjar for a free counseling session.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FINAL CTA -->
+  <section class="section-padding" style="background-color: var(--color-primary); color: var(--color-bg-white);">
+    <div class="container text-center reveal" style="max-width: 800px;">
+      <h2 style="color: var(--color-bg-white); margin-bottom: 1.5rem;">Start Your English Learning Journey Today</h2>
+      <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2.5rem; font-size: 1.2rem;">Don't let the fear of English hold you back. Enroll at AONE Classes Anjar and build the fluency to achieve your goals.</p>
+      
+      <div class="btn-group" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">Enroll Now</a>
+        <a href="https://wa.me/+919909525195?text=Hello%20Sir%20%F0%9F%91%8B%20%20I%20am%20interested%20in%20the%203-Month%20Spoken%20English%20Course.%20%20Could%20you%20please%20share%20the%20course%20details,%20fees,%20batch%20timings,%20and%20admission%20process?%20%20Thank%20you." class="btn btn-whatsapp" target="_blank" style="padding: 1rem 2.5rem;">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CONTACT SECTION -->
+  <section class="section-padding bg-alternate" id="contact">
+    <div class="container">
+      <div class="section-header text-center center reveal">
+        <span class="tag">Get in Touch</span>
+        <h2>Visit Us or Send an Inquiry</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Details -->
+        <div class="contact-info reveal">
+          <h3>AONE Classes Anjar</h3>
+          <p>Located in the heart of Anjar, Sorathiya Gate. Drop by for a face-to-face academic discussion.</p>
+          
+          <div class="contact-info-item" style="margin-top: 1rem;">
+            <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-info-text">
+              <h4>Address</h4>
+              <p>📍 Sorathiya Gate, Opp. Honey Bakery,<br>Anjar, Gujarat – 370110</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-info-text">
+              <h4>Call Desk</h4>
+              <p><a href="tel:+919909525195" style="color: inherit;">+91 99095 25195</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon" style="background-color: rgba(37, 211, 102, 0.08); color: #25D366;"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contact-info-text">
+              <h4>WhatsApp Chat</h4>
+              <p><a href="https://wa.me/+919909525195" target="_blank" style="color: inherit;">+91 99095 25195</a></p>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="map-wrapper" style="margin-top: 1.5rem;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.691763133333!2d70.02450000000001!3d23.1112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950bf4258ffffff%3A0xc6cf6d4264627d35!2sAnjar%2C%20Gujarat%20370110!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="contact-form-card reveal delay-200">
+          <div id="formContent">
+            <h3>Admission Lead Capture</h3>
+            <p style="margin-bottom: 1.5rem;">Submit your details below and block your counseling slot.</p>
+            
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span style="color: var(--color-cta)">*</span></label>
+                <input type="text" id="name" class="form-control" placeholder="Enter student name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number <span style="color: var(--color-cta)">*</span></label>
+                <input type="tel" id="phone" class="form-control" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+              </div>
+
+              <div class="form-group">
+                <label for="course" class="form-label">Syllabus Preference</label>
+                <select id="course" class="form-control">
+                  <option value="Spoken English (3 Months)">Spoken English Course</option>
+                  <option value="11th Commerce (Gujarati Medium)">11th Commerce (Guj. Medium)</option>
+                  <option value="12th Commerce (Gujarati Medium)">12th Commerce (Guj. Medium)</option>
+                  <option value="B.Com Course (FY/SY/TY)">B.Com (First/Second/Third Year)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Question / Batch time preference</label>
+                <textarea id="message" class="form-control" placeholder="Any queries or timings preferred..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                Submit Application <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Animated Form Success State -->
+          <div id="successMessage" class="form-success-message">
+            <i class="fa-regular fa-circle-check"></i>
+            <h3>Thank You, <span id="successUserName">Student</span>!</h3>
+            <p style="margin-bottom: 2rem;">Your admission counseling query has been successfully registered. We will call you back shortly.</p>
+            
+            <a href="#" id="successWhatsappCTA" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+              <i class="fa-brands fa-whatsapp"></i> Confirm via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Footer Col 1 -->
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="max-width: 180px;">
+          <img src="assets/logo.png" alt="AONE Classes Logo" style="height: 60px;">
+        </a>
+        <p>Premium offline Spoken English and Commerce Coaching Institute in Anjar, Gujarat. Bridge the gap between learning and real communication.</p>
+        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+          <a href="#" class="footer-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="footer-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/+919909525195" class="footer-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Col 2 -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="courses.html" class="footer-link">Other Courses</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 3 -->
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Sorathiya Gate, Opp. Honey Bakery,<br>Anjar, Gujarat – 370110</p>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <p><a href="tel:+919909525195" style="color: inherit;">+91 99095 25195</a></p>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <p>info@aoneclassesanjar.in</p>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <p>aoneclassesanjar.in</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AONE Classes Anjar. All Rights Reserved.</p>
+      <p>Developed with ❤️ for Gujarati Students</p>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="tel:+919909525195" class="mobile-action-btn mobile-action-call">
+      <i class="fa-solid fa-phone"></i> Call Now
+    </a>
+    <a href="https://wa.me/+919909525195?text=Hello%20Sir%20%F0%9F%91%8B%20%20I%20am%20interested%20in%20the%203-Month%20Spoken%20English%20Course.%20%20Could%20you%20please%20share%20the%20course%20details,%20fees,%20batch%20timings,%20and%20admission%20process?%20%20Thank%20you." target="_blank" class="mobile-action-btn mobile-action-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
+    </a>
+  </div>
+
+  <!-- Client-side Logic Script -->
+  <script src="script.js"></script>
+</body>
+</html>
