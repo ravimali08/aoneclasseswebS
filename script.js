@@ -152,6 +152,36 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // Send inquiry data to Supabase
+      const supabaseUrl = 'https://sgvaqjmlvqwjiczpulfc.supabase.co';
+      const supabaseKey = 'sb_publishable_Xvt1CBVQ8Y9cSzhRoG9j7Q_hjBOFkTO';
+
+      fetch(`${supabaseUrl}/rest/v1/inquiries`, {
+        method: 'POST',
+        headers: {
+          'apikey': supabaseKey,
+          'Authorization': `Bearer ${supabaseKey}`,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          name: name,
+          phone: phone,
+          course: course,
+          message: message
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          console.error('Error submitting to Supabase:', response.statusText);
+        } else {
+          console.log('Successfully saved submission to Supabase.');
+        }
+      })
+      .catch(err => {
+        console.error('Network error saving to Supabase:', err);
+      });
+
       // Format custom success output message details
       const userNameSpan = document.getElementById('successUserName');
       if (userNameSpan) {
