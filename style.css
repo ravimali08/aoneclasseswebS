@@ -1625,3 +1625,137 @@ textarea.form-control {
     align-items: baseline;
   }
 }
+
+/* --- Theme Toggle Switch --- */
+:root.light-mode {
+  --color-primary: #111827;       /* Dark Navy */
+  --color-secondary: #FFD700;     /* Yellow Accent */
+  --color-cta: #E53935;           /* Red CTA */
+  --color-cta-hover: #C62828;     /* Darker Red */
+  --color-yellow-hover: #E6C200;  /* Darker Yellow */
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #EEF2F6;      /* Light Gray alternate background */
+  --color-text-main: #0F172A;     /* Navy Text */
+  --color-text-sub: #1E293B;      /* Gray Text */
+  --color-border: #94A3B8;
+  
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 40px rgba(17, 24, 39, 0.12);
+  --shadow-yellow: 0 10px 30px rgba(255, 215, 0, 0.25);
+  --shadow-red: 0 10px 30px rgba(229, 57, 53, 0.25);
+}
+
+/* Specific elements needing class-based color changes in Light Mode */
+:root.light-mode .header-scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+:root.light-mode .btn-primary {
+  color: var(--color-bg-white);
+}
+
+:root.light-mode .btn-secondary {
+  color: var(--color-primary);
+}
+
+:root.light-mode .btn-outline {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+:root.light-mode .btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+}
+
+:root.light-mode .mobile-action-call {
+  color: var(--color-bg-white);
+}
+
+:root.light-mode .mobile-action-whatsapp {
+  color: var(--color-bg-white);
+}
+
+:root.light-mode .stats-bar {
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  border: none;
+}
+
+:root.light-mode .footer-col h3,
+:root.light-mode .footer-col h4 {
+  color: var(--color-bg-white);
+}
+
+:root.light-mode .activity-icon {
+  color: var(--color-primary);
+}
+
+:root.light-mode .activity-card:hover .activity-icon {
+  color: var(--color-primary);
+}
+
+:root.light-mode .about-slide-avatar {
+  color: var(--color-primary);
+}
+
+:root.light-mode .testimonial-avatar {
+  color: var(--color-primary);
+}
+
+:root.light-mode .about-carousel-arrow {
+  color: var(--color-primary);
+}
+
+:root.light-mode .about-carousel-arrow:hover {
+  color: var(--color-bg-white);
+}
+
+:root.light-mode .course-card[style*="var(--color-bg-light)"] {
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg-white) !important;
+}
+
+:root.light-mode .course-card[style*="var(--color-bg-light)"] h3,
+:root.light-mode .course-card[style*="var(--color-bg-light)"] p,
+:root.light-mode .course-card[style*="var(--color-bg-light)"] li {
+  color: var(--color-bg-white) !important;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-main);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-normal);
+  font-size: 1.1rem;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--color-bg-light);
+  transform: scale(1.08);
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+@media (min-width: 1024px) {
+  .theme-toggle-btn {
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .theme-toggle-btn {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+}

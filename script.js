@@ -247,4 +247,36 @@ document.addEventListener('DOMContentLoaded', () => {
     showAboutSlide(0);
     startAboutInterval();
   }
+
+  // === 7. Theme Toggle (Light / Dark Mode) ===
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeToggleIcon = document.getElementById('themeToggleIcon');
+  
+  const updateThemeUI = (isLight) => {
+    if (isLight) {
+      document.documentElement.classList.add('light-mode');
+      if (themeToggleIcon) {
+        themeToggleIcon.className = 'fa-solid fa-moon';
+      }
+    } else {
+      document.documentElement.classList.remove('light-mode');
+      if (themeToggleIcon) {
+        themeToggleIcon.className = 'fa-solid fa-sun';
+      }
+    }
+  };
+
+  // Check localStorage on load
+  const isLightMode = localStorage.getItem('theme') === 'light';
+  updateThemeUI(isLightMode);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const currentIsLight = document.documentElement.classList.contains('light-mode');
+      const nextIsLight = !currentIsLight;
+      localStorage.setItem('theme', nextIsLight ? 'light' : 'dark');
+      updateThemeUI(nextIsLight);
+    });
+  }
 });
+

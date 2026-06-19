@@ -11,6 +11,11 @@
   
   <!-- Global & Component Styles -->
   <link rel="stylesheet" href="style.css">
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.add('light-mode');
+    }
+  </script>
 </head>
 <body>
 
@@ -27,6 +32,10 @@
         <li><a href="courses.html" class="nav-link">Other Courses</a></li>
         <li><a href="contact.html" class="nav-link">Contact Us</a></li>
       </ul>
+      
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun" id="themeToggleIcon"></i>
+      </button>
       
       <div class="nav-cta">
         <a href="contact.html" class="btn btn-primary">Enroll Now</a>
