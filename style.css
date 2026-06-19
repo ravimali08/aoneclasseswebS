@@ -1746,16 +1746,17 @@ textarea.form-control {
   color: var(--color-secondary);
 }
 
+/* --- Navigation Right Wrapper --- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto; /* Push everything in .nav-right to the right side of the container */
+}
+
 @media (min-width: 1024px) {
-  .theme-toggle-btn {
-    margin-left: auto;
-    margin-right: 1.5rem;
+  .nav-right {
+    gap: 2rem;
   }
 }
 
-@media (max-width: 1023px) {
-  .theme-toggle-btn {
-    margin-left: auto;
-    margin-right: 1rem;
-  }
-}
