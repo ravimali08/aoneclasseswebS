@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <tr>
           <td style="font-size: 0.85rem; color: var(--color-text-sub); white-space: nowrap;">${formattedDate}</td>
           <td style="font-weight: 600; color: var(--color-text-main);">${escapeHTML(item.name)}</td>
-          <td><a href="tel:${item.phone}" style="color: var(--color-secondary); font-weight: 500;">${escapeHTML(item.phone)}</a></td>
+          <td><a href="tel:${item.phone}" class="admin-phone-link" style="font-weight: 500;">${escapeHTML(item.phone)}</a></td>
           <td><span class="${badgeClass}">${escapeHTML(item.course || 'Spoken English')}</span></td>
           <td style="font-size: 0.9rem; color: var(--color-text-sub); max-width: 300px; word-wrap: break-word;">${escapeHTML(item.message || '-')}</td>
         </tr>

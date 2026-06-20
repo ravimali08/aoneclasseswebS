@@ -1235,10 +1235,22 @@ textarea.form-control {
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
 
-/* Custom icon designs */
 .icon-success {
   color: #10B981;
 }
+
+/* Phone Links Styling */
+.contact-phone-link,
+.admin-phone-link {
+  color: var(--color-secondary);
+  transition: var(--transition-fast);
+}
+
+.contact-phone-link:hover,
+.admin-phone-link:hover {
+  color: var(--color-cta);
+}
+
 
 /* Learning Activities Specific Grid styling */
 .activities-grid {
@@ -1723,6 +1735,24 @@ textarea.form-control {
 :root.light-mode .course-card[style*="var(--color-bg-light)"] li {
   color: var(--color-bg-white) !important;
 }
+
+/* Light mode adjustments for custom link and dashboard colors */
+:root.light-mode .contact-phone-link {
+  color: #128C7E;
+}
+
+:root.light-mode .admin-phone-link {
+  color: #128C7E;
+}
+
+:root.light-mode .badge-course {
+  color: #128C7E;
+}
+
+:root.light-mode .btn-export {
+  color: var(--color-primary);
+}
+
 
 .theme-toggle-btn {
   background: transparent;
